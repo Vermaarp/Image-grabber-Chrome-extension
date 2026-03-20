@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 300px;
+      background: #13131d;
+      color: #e0e0ec;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .header .icon {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+
+    .header h1 {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .header p {
+      font-size: 11px;
+      color: #6b6b80;
+      font-weight: 500;
+    }
+
+    .activate-btn {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      letter-spacing: 0.01em;
+    }
+
+    .activate-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+    }
+
+    .activate-btn:active {
+      transform: translateY(0);
+    }
+
+    .steps {
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .step {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+      color: #8888a0;
+    }
+
+    .step-num {
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: rgba(255,255,255,0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 700;
+      color: #6366f1;
+      flex-shrink: 0;
+    }
+
+    .footer {
+      margin-top: 16px;
+      text-align: center;
+      font-size: 10px;
+      color: #44445a;
+    }
+
+    .kbd {
+      background: rgba(255,255,255,0.06);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-family: monospace;
+      color: #a1a1b5;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="icon">🖼️</div>
+    <div>
+      <h1>Image Grabber</h1>
+      <p>Batch-download images from any page</p>
+    </div>
+  </div>
+
+  <button class="activate-btn" id="activateBtn">
+    ⚡ Activate on This Page
+  </button>
+
+  <div class="steps">
+    <div class="step">
+      <span class="step-num">1</span>
+      Click images to select them
+    </div>
+    <div class="step">
+      <span class="step-num">2</span>
+      Use filters to find specific sizes
+    </div>
+    <div class="step">
+      <span class="step-num">3</span>
+      Hit Download — saved to <span class="kbd">ImageGrabber/</span>
+    </div>
+  </div>
+
+  <div class="footer">
+    Images saved to your Downloads → ImageGrabber folder
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
